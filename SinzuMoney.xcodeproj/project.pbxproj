@@ -16,6 +16,8 @@
 		94FE9F05245D17EE00E5C590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F03245D17EE00E5C590 /* Main.storyboard */; };
 		94FE9F07245D17F000E5C590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F06245D17F000E5C590 /* Assets.xcassets */; };
 		94FE9F0A245D17F000E5C590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F08245D17F000E5C590 /* LaunchScreen.storyboard */; };
+		94FE9F11245D1C8200E5C590 /* SinzuMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9F10245D1C8200E5C590 /* SinzuMoney.swift */; };
+		94FE9F13245D1CEA00E5C590 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9F12245D1CEA00E5C590 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		94FE9F06245D17F000E5C590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94FE9F09245D17F000E5C590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94FE9F0B245D17F000E5C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94FE9F10245D1C8200E5C590 /* SinzuMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinzuMoney.swift; sourceTree = "<group>"; };
+		94FE9F12245D1CEA00E5C590 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		94574F9F245776060098C78E /* SinzuMoney */ = {
 			isa = PBXGroup;
 			children = (
+				94FE9F0F245D1C6100E5C590 /* Source */,
 				94574FA0245776060098C78E /* SinzuMoney.h */,
 				94574FA1245776060098C78E /* Info.plist */,
 			);
@@ -121,6 +126,15 @@
 				94FE9F0B245D17F000E5C590 /* Info.plist */,
 			);
 			path = SinzuMoneyExamples;
+			sourceTree = "<group>";
+		};
+		94FE9F0F245D1C6100E5C590 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				94FE9F10245D1C8200E5C590 /* SinzuMoney.swift */,
+				94FE9F12245D1CEA00E5C590 /* Extension.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +216,7 @@
 				TargetAttributes = {
 					94574F9C245776060098C78E = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					94574FA5245776060098C78E = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -263,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94FE9F11245D1C8200E5C590 /* SinzuMoney.swift in Sources */,
+				94FE9F13245D1CEA00E5C590 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +454,7 @@
 		94574FB2245776060098C78E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GDMX8HJT5A;
@@ -453,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.simpumind.SinzuMoney;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +480,7 @@
 		94574FB3245776060098C78E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GDMX8HJT5A;
@@ -485,6 +505,7 @@
 		94574FB5245776060098C78E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDMX8HJT5A;
 				INFOPLIST_FILE = SinzuMoneyTests/Info.plist;
@@ -503,6 +524,7 @@
 		94574FB6245776060098C78E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDMX8HJT5A;
 				INFOPLIST_FILE = SinzuMoneyTests/Info.plist;
