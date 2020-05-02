@@ -10,6 +10,12 @@
 		94574FA7245776060098C78E /* SinzuMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94574F9D245776060098C78E /* SinzuMoney.framework */; };
 		94574FAC245776060098C78E /* SinzuMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94574FAB245776060098C78E /* SinzuMoneyTests.swift */; };
 		94574FAE245776060098C78E /* SinzuMoney.h in Headers */ = {isa = PBXBuildFile; fileRef = 94574FA0245776060098C78E /* SinzuMoney.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94FE9EFE245D17EE00E5C590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9EFD245D17EE00E5C590 /* AppDelegate.swift */; };
+		94FE9F00245D17EE00E5C590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9EFF245D17EE00E5C590 /* SceneDelegate.swift */; };
+		94FE9F02245D17EE00E5C590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9F01245D17EE00E5C590 /* ViewController.swift */; };
+		94FE9F05245D17EE00E5C590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F03245D17EE00E5C590 /* Main.storyboard */; };
+		94FE9F07245D17F000E5C590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F06245D17F000E5C590 /* Assets.xcassets */; };
+		94FE9F0A245D17F000E5C590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94FE9F08245D17F000E5C590 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,14 @@
 		94574FA6245776060098C78E /* SinzuMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinzuMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94574FAB245776060098C78E /* SinzuMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinzuMoneyTests.swift; sourceTree = "<group>"; };
 		94574FAD245776060098C78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94FE9EFB245D17EE00E5C590 /* SinzuMoneyExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinzuMoneyExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FE9EFD245D17EE00E5C590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94FE9EFF245D17EE00E5C590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		94FE9F01245D17EE00E5C590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94FE9F04245D17EE00E5C590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94FE9F06245D17F000E5C590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94FE9F09245D17F000E5C590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94FE9F0B245D17F000E5C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94FE9EF8245D17EE00E5C590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +76,7 @@
 			children = (
 				94574F9F245776060098C78E /* SinzuMoney */,
 				94574FAA245776060098C78E /* SinzuMoneyTests */,
+				94FE9EFC245D17EE00E5C590 /* SinzuMoneyExamples */,
 				94574F9E245776060098C78E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +86,7 @@
 			children = (
 				94574F9D245776060098C78E /* SinzuMoney.framework */,
 				94574FA6245776060098C78E /* SinzuMoneyTests.xctest */,
+				94FE9EFB245D17EE00E5C590 /* SinzuMoneyExamples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +107,20 @@
 				94574FAD245776060098C78E /* Info.plist */,
 			);
 			path = SinzuMoneyTests;
+			sourceTree = "<group>";
+		};
+		94FE9EFC245D17EE00E5C590 /* SinzuMoneyExamples */ = {
+			isa = PBXGroup;
+			children = (
+				94FE9EFD245D17EE00E5C590 /* AppDelegate.swift */,
+				94FE9EFF245D17EE00E5C590 /* SceneDelegate.swift */,
+				94FE9F01245D17EE00E5C590 /* ViewController.swift */,
+				94FE9F03245D17EE00E5C590 /* Main.storyboard */,
+				94FE9F06245D17F000E5C590 /* Assets.xcassets */,
+				94FE9F08245D17F000E5C590 /* LaunchScreen.storyboard */,
+				94FE9F0B245D17F000E5C590 /* Info.plist */,
+			);
+			path = SinzuMoneyExamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +173,23 @@
 			productReference = 94574FA6245776060098C78E /* SinzuMoneyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		94FE9EFA245D17EE00E5C590 /* SinzuMoneyExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94FE9F0E245D17F000E5C590 /* Build configuration list for PBXNativeTarget "SinzuMoneyExamples" */;
+			buildPhases = (
+				94FE9EF7245D17EE00E5C590 /* Sources */,
+				94FE9EF8245D17EE00E5C590 /* Frameworks */,
+				94FE9EF9245D17EE00E5C590 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinzuMoneyExamples;
+			productName = SinzuMoneyExamples;
+			productReference = 94FE9EFB245D17EE00E5C590 /* SinzuMoneyExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,6 +204,9 @@
 						CreatedOnToolsVersion = 11.2.1;
 					};
 					94574FA5245776060098C78E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					94FE9EFA245D17EE00E5C590 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -169,6 +226,7 @@
 			targets = (
 				94574F9C245776060098C78E /* SinzuMoney */,
 				94574FA5245776060098C78E /* SinzuMoneyTests */,
+				94FE9EFA245D17EE00E5C590 /* SinzuMoneyExamples */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +243,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94FE9EF9245D17EE00E5C590 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FE9F0A245D17F000E5C590 /* LaunchScreen.storyboard in Resources */,
+				94FE9F07245D17F000E5C590 /* Assets.xcassets in Resources */,
+				94FE9F05245D17EE00E5C590 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +274,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94FE9EF7245D17EE00E5C590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FE9F02245D17EE00E5C590 /* ViewController.swift in Sources */,
+				94FE9EFE245D17EE00E5C590 /* AppDelegate.swift in Sources */,
+				94FE9F00245D17EE00E5C590 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -215,6 +293,25 @@
 			targetProxy = 94574FA8245776060098C78E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94FE9F03245D17EE00E5C590 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94FE9F04245D17EE00E5C590 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94FE9F08245D17F000E5C590 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94FE9F09245D17F000E5C590 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		94574FAF245776060098C78E /* Debug */ = {
@@ -421,6 +518,42 @@
 			};
 			name = Release;
 		};
+		94FE9F0C245D17F000E5C590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDMX8HJT5A;
+				INFOPLIST_FILE = SinzuMoneyExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpumind.SinzuMoneyExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94FE9F0D245D17F000E5C590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDMX8HJT5A;
+				INFOPLIST_FILE = SinzuMoneyExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.simpumind.SinzuMoneyExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -447,6 +580,15 @@
 			buildConfigurations = (
 				94574FB5245776060098C78E /* Debug */,
 				94574FB6245776060098C78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94FE9F0E245D17F000E5C590 /* Build configuration list for PBXNativeTarget "SinzuMoneyExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94FE9F0C245D17F000E5C590 /* Debug */,
+				94FE9F0D245D17F000E5C590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
