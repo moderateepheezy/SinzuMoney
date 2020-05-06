@@ -9,4 +9,4 @@ script:
   - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SinzuMoney.xcodeproj -scheme SinzuMoney -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES build test
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -J 'SinzuMoney'
