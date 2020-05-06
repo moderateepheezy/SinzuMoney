@@ -1,10 +1,5 @@
 language: swift
 
 osx_image: xcode11.2.1
-env:
-  matrix:
-    - TEST_SDK=iphonesimulator13.2 OS=13.1 NAME='iPhone XR'
-    - TEST_SDK=iphonesimulator13.2 OS=13.1 NAME='iPhone 7'
-
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SinzuMoney.xcodeproj -scheme SinzuMoney -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SinzuMoney.xcodeproj -scheme SinzuMoney -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=12.1,name=iPhoneX, ONLY_ACTIVE_ARCH=YES
