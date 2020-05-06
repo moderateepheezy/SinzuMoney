@@ -3,7 +3,7 @@ language: swift
 osx_image: xcode11.2.1
 env:
   matrix:
-    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone X'
+    - TEST_SDK=iphonesimulator13.2 OS=12.1 NAME='iPhone 11 Pro'
 
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SinzuMoney.xcodeproj -scheme SinzuMoney -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES build test | xcpretty -c --test --color
+  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SinzuMoney.xcodeproj -scheme SinzuMoney -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES build test
