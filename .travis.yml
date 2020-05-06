@@ -10,4 +10,4 @@ script:
 
 after_success:
   - slather
-  - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
+  - bash <(curl -s https://codecov.io/bash) -t {CODECOV_TOKEN} -J 'SinzuMoney' -f reports/cobertura.xml -X coveragepy -X gcov -X xcode
