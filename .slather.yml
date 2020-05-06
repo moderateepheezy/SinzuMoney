@@ -1,6 +1,4 @@
 coverage_service: cobertura_xml
-xcodeproj: SinzuMoney.xcodeproj
+xcodeproj: ./SinzuMoney.xcodeproj
 scheme: SinzuMoney
-output_directory: reports
-ignore:
-  - SinzuMoneyTests/*
+output_directory: ./test_reports
