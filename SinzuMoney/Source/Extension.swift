@@ -28,3 +28,23 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+extension Double {
+    var commaSeparatedFromStringAmount: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.groupingSize = 3
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter.string(from: NSNumber(value: self)) ?? .empty
+    }
+}
+
+extension Int {
+    var commaSeparatedFromStringAmount: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.groupingSize = 3
+        return numberFormatter.string(from: NSNumber(value: self)) ?? .empty
+    }
+}

@@ -10,6 +10,7 @@
 		94574FA7245776060098C78E /* SinzuMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94574F9D245776060098C78E /* SinzuMoney.framework */; };
 		94574FAC245776060098C78E /* SinzuMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94574FAB245776060098C78E /* SinzuMoneyTests.swift */; };
 		94574FAE245776060098C78E /* SinzuMoney.h in Headers */ = {isa = PBXBuildFile; fileRef = 94574FA0245776060098C78E /* SinzuMoney.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94CDBC2F247CB01B00077355 /* OperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CDBC2D247CA66B00077355 /* OperatorTest.swift */; };
 		94FE9EFE245D17EE00E5C590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9EFD245D17EE00E5C590 /* AppDelegate.swift */; };
 		94FE9F00245D17EE00E5C590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9EFF245D17EE00E5C590 /* SceneDelegate.swift */; };
 		94FE9F02245D17EE00E5C590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE9F01245D17EE00E5C590 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		94574FA6245776060098C78E /* SinzuMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinzuMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94574FAB245776060098C78E /* SinzuMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinzuMoneyTests.swift; sourceTree = "<group>"; };
 		94574FAD245776060098C78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CDBC2D247CA66B00077355 /* OperatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorTest.swift; sourceTree = "<group>"; };
 		94FE9EFB245D17EE00E5C590 /* SinzuMoneyExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinzuMoneyExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FE9EFD245D17EE00E5C590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94FE9EFF245D17EE00E5C590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				94574FAB245776060098C78E /* SinzuMoneyTests.swift */,
+				94CDBC2D247CA66B00077355 /* OperatorTest.swift */,
 				94574FAD245776060098C78E /* Info.plist */,
 			);
 			path = SinzuMoneyTests;
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94574FAC245776060098C78E /* SinzuMoneyTests.swift in Sources */,
+				94CDBC2F247CB01B00077355 /* OperatorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
