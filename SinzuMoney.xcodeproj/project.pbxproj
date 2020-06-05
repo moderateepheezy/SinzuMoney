@@ -100,7 +100,8 @@
 		94574F9F245776060098C78E /* SinzuMoney */ = {
 			isa = PBXGroup;
 			children = (
-				94FE9F0F245D1C6100E5C590 /* Source */,
+				94FE9F10245D1C8200E5C590 /* SinzuMoney.swift */,
+				94FE9F12245D1CEA00E5C590 /* Extension.swift */,
 				94574FA0245776060098C78E /* SinzuMoney.h */,
 				94574FA1245776060098C78E /* Info.plist */,
 			);
@@ -129,15 +130,6 @@
 				94FE9F0B245D17F000E5C590 /* Info.plist */,
 			);
 			path = SinzuMoneyExamples;
-			sourceTree = "<group>";
-		};
-		94FE9F0F245D1C6100E5C590 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				94FE9F10245D1C8200E5C590 /* SinzuMoney.swift */,
-				94FE9F12245D1CEA00E5C590 /* Extension.swift */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
