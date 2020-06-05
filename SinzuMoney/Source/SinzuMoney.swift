@@ -40,7 +40,7 @@ struct Money: Codable, Equatable {
 
 extension Money.Currency {
 
-    static let nigerianNaira = Money.Currency(code: "NGN", name: "Nigerian naira", symbol: "₦", baseUnit: "Naira", decimalUnit: "Kobo")
+    static var nigerianNaira = Money.Currency(code: "NGN", name: "Nigerian naira", symbol: "₦", baseUnit: "Naira", decimalUnit: "Kobo")
 
     static func from(code: String) -> Money.Currency {
         switch code {
@@ -52,12 +52,11 @@ extension Money.Currency {
     }
 
     var localized: String {
-        return Money.Currency.nigerianNaira.symbol!
+        return symbol ?? "₦"
     }
 
-    /// TODO: When different currencies are available we change back to this `symbol ?? String(describing: code.first)`
     var localizedSymbol: String? {
-        return Money.Currency.nigerianNaira.symbol
+        return code
     }
 }
 
@@ -176,12 +175,12 @@ extension Money {
         var num = doubleValue
         num = fabs(num)
 
-        guard num > 9999999 else {
+        guard num > 999 else {
             return .empty
         }
 
         let exp: Int = Int(log10(num) / 3.0)
-        let units = ["K", "M", "B", "G", "T", "P", "E"]
+        let units = ["K", "M", "B", "T", "G", "P", "E"]
         return units[exp - 1]
     }
 
@@ -198,8 +197,8 @@ extension Money {
         let exp: Int = Int(log10(num) / 3.0)
 
         let roundedNum: Int = Int(round(10 * num / pow(1000.0, Double(exp))) / 10)
-        let units = ["K", "M", "B", "G", "T", "P", "E"]
-        return "\(sign)\(roundedNum)\(units[exp - 1])"
+
+        return "\(sign)\(roundedNum)\(unit)"
     }
 
     var doubleValue: Double {
@@ -211,7 +210,7 @@ extension Money {
     }
 
     var localizedBalance: String {
-        return "Balance " + "\(localized)"
+        return localized
     }
 
     var attributedString: NSAttributedString {
