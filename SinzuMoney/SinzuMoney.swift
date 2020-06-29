@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-struct Money: Codable, Equatable {
+public struct Money: Codable, Equatable {
 
-    struct Currency: Codable {
+    public struct Currency: Codable {
         let code: String
         let name: String?
         let symbol: String?
@@ -19,10 +19,10 @@ struct Money: Codable, Equatable {
         let decimalUnit: String?
     }
 
-    let currency: Currency
-    let value: Decimal
+    public let currency: Currency
+    public let value: Decimal
 
-    static let defaultCurrency = Money.Currency.nigerianNaira
+    public static let defaultCurrency = Money.Currency.nigerianNaira
 
     private static var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -38,7 +38,7 @@ struct Money: Codable, Equatable {
     }
 }
 
-extension Money.Currency {
+public extension Money.Currency {
 
     static var nigerianNaira = Money.Currency(code: "NGN", name: "Nigerian naira", symbol: "₦", baseUnit: "Naira", decimalUnit: "Kobo")
 
@@ -61,7 +61,7 @@ extension Money.Currency {
 }
 
 /// TODO: When different currencies will be available there should be some check whether we operate on same currencies.
-extension Money {
+public extension Money {
 
     private enum Constants {
         static let textColor = UIColor.black.withAlphaComponent(0.87)
@@ -151,12 +151,7 @@ extension Money {
     }
 
     var localized: String {
-        return "\(currency.localized)" + humanReadable + unit
-    }
-
-    var localizedDashable: String {
-        guard self != .zero else { return "-" }
-        return "\(currency.localized)\(localizedValue)"
+        return "\(currency.localized)" + humanReadable
     }
 
     var integerLocalized: String {
@@ -210,7 +205,7 @@ extension Money {
     }
 
     var localizedBalance: String {
-        return localized
+        return localized + unit
     }
 
     var attributedString: NSAttributedString {
@@ -324,7 +319,7 @@ extension Money {
     }
 }
 
-extension Optional where Wrapped == Money {
+public extension Optional where Wrapped == Money {
 
     var orZero: Money {
         return self ?? .zero

@@ -15,7 +15,7 @@ class SinzuMoneyTests: XCTestCase {
 
     let noSymbolCurrency = Money.Currency(code: "", name: "SMZ Dallaz", symbol: "", baseUnit: "Dallaz", decimalUnit: "Laz")
 
-    func testSimpleMoney() {
+    func testPositiveSimpleMoney() {
         let money = Money.from(value: -10)
         let abosuluteMoney = money.absoluteValue
         XCTAssertEqual(abosuluteMoney.doubleValue, 10)
@@ -24,28 +24,22 @@ class SinzuMoneyTests: XCTestCase {
         XCTAssertEqual(zeroMoney.doubleValue, 0)
     }
 
-    func testLocalizeDashableMoney() {
-        let money = Money.from(value: 10.32)
-
-        let localizeDashableMoney = money.localizedDashable
-        XCTAssertEqual(localizeDashableMoney, "₦10.32")
-    }
-
-    func testLocalizeDashableZeroMoney() {
-        let localizeDashableZeroMoney = Money.zero.localizedDashable
-        XCTAssertEqual(localizeDashableZeroMoney, "-")
-    }
-
     func testIntLocalizedMoney() {
         let localizedMoney = Money.from(value: 10000000.72)
         let localized = localizedMoney.integerLocalized
         XCTAssertEqual(localized, "₦10,000,000")
     }
 
-    func testLocalizedMoney() {
+    func testLocalizedNegativeMoney() {
+        let localizedMoney = Money.from(value: -10000000.32)
+        let localized = localizedMoney.localized
+        XCTAssertEqual(localized, "₦-10,000,000.32")
+    }
+
+    func testLocalizedPositiveMoney() {
         let localizedMoney = Money.from(value: 10000000.32)
         let localized = localizedMoney.localized
-        XCTAssertEqual(localized, "₦10,000,000.32M")
+        XCTAssertEqual(localized, "₦10,000,000.32")
     }
 
     func testLocalizedValueMoney() {
@@ -127,17 +121,17 @@ class SinzuMoneyTests: XCTestCase {
 
     func testChangeCurrency() {
         let money = Money.from(value: 1234.23)
-        XCTAssertEqual(money.localizedBalance, "₦1,234.23K")
+        XCTAssertEqual(money.localized, "₦1,234.23")
         XCTAssertEqual(money.currency.symbol, "₦")
 
         let moneyWithNewCurrency = money.newWith(currency: usDollarCurrency)
-        XCTAssertEqual(moneyWithNewCurrency.localizedBalance, "$1,234.23K")
+        XCTAssertEqual(moneyWithNewCurrency.localized, "$1,234.23")
         XCTAssertEqual(moneyWithNewCurrency.currency.symbol, "$")
 
         XCTAssertEqual(money.currency.symbol, "₦")
 
         let moneyWithNoSymbolCurrency = money.newWith(currency: noSymbolCurrency)
-        XCTAssertEqual(moneyWithNoSymbolCurrency.localizedBalance, "1,234.23K")
+        XCTAssertEqual(moneyWithNoSymbolCurrency.localized, "1,234.23")
         XCTAssertEqual(moneyWithNoSymbolCurrency.currency.symbol, .empty)
         XCTAssertEqual(moneyWithNoSymbolCurrency.currency.localizedSymbol, .empty)
     }
@@ -147,10 +141,10 @@ class SinzuMoneyTests: XCTestCase {
 
         let dollarCurrency = Money.Currency.from(code: "$")
         let newDollarCurrencyMoney = money.newWith(currency: dollarCurrency)
-        XCTAssertEqual(newDollarCurrencyMoney.localizedBalance, "$1,234.23K")
+        XCTAssertEqual(newDollarCurrencyMoney.localized, "$1,234.23")
 
         let nairaCurrency = Money.Currency.from(code: "₦")
         let newNairaCurrencyMoney = money.newWith(currency: nairaCurrency)
-        XCTAssertEqual(newNairaCurrencyMoney.localizedBalance, "₦1,234.23K")
+        XCTAssertEqual(newNairaCurrencyMoney.localized, "₦1,234.23")
     }
 }
