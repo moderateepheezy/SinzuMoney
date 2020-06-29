@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SinzuMoney"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "This is a simple type-safe representation of a Monetary"
 
   spec.description  = <<-DESC
