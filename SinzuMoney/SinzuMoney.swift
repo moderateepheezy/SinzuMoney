@@ -151,12 +151,7 @@ public extension Money {
     }
 
     var localized: String {
-        return "\(currency.localized)" + humanReadable + unit
-    }
-
-    var localizedDashable: String {
-        guard self != .zero else { return "-" }
-        return "\(currency.localized)\(localizedValue)"
+        return "\(currency.localized)" + humanReadable
     }
 
     var integerLocalized: String {
@@ -210,7 +205,7 @@ public extension Money {
     }
 
     var localizedBalance: String {
-        return localized
+        return localized + unit
     }
 
     var attributedString: NSAttributedString {
